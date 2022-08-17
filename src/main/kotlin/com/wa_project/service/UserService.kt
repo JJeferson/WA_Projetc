@@ -7,13 +7,14 @@ import com.wa_project.mapper.EntityToDto
 import com.wa_project.repository.UserRepository
 import com.wa_project.repository.UserUseCase
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Service
 
+@Service
 class UserService: UserUseCase {
     @Autowired
     var userRepository: UserRepository? = null
-    @Autowired
+
     var dtoToEntity: DtoToEntity? = null
-    @Autowired
     var entityToDto: EntityToDto? = null
 
     override fun save(userDTO: UserDTO?): UserDTO? {
@@ -21,10 +22,10 @@ class UserService: UserUseCase {
     }
 
     override fun update(userDTO: UserDTO?): UserDTO? {
-        return entityToDto?.convert(userRepository?.save(dtoToEntity?.convert(userDTO)))
+      return entityToDto?.convert(userRepository?.save(dtoToEntity?.convert(userDTO)))
     }
 
     override fun findByIdentificador(id: Integer?): UserDTO? {
-        return entityToDto?.convert(userRepository?.findByIdentificador(id))
+       return entityToDto?.convert(userRepository?.findByIdentificador(id))
     }
 }
