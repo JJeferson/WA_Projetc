@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
 
 plugins {
 	id("org.springframework.boot") version "2.7.2"
@@ -17,6 +18,14 @@ repositories {
 }
 
 dependencies {
+	implementation("org.mapstruct:mapstruct:1.5.2.Final")
+
+	testImplementation("org.junit.jupiter:junit-jupiter-api:5.3.1")
+	testImplementation("org.junit.jupiter:junit-jupiter-engine:5.3.1")
+	testImplementation("org.assertj:assertj-core:3.11.1")
+
+
+
 	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-web")

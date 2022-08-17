@@ -11,7 +11,7 @@ class UserEntity {
     @Id
     @JsonProperty("_identificador")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var identificador: String? = null
+    var identificador: Integer? = null
     var nome: String? = null
     var documento : String? = null
     @Column(name = "data_de_criacao")
