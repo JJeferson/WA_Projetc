@@ -1,7 +1,7 @@
 package com.wa_project.domain.response
 import java.time.LocalDate
 
-class userResponse {
+class UserResponse {
     var identificador: Integer? = null
     var nome: String? = null
     var documento : String? = null

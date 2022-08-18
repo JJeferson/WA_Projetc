@@ -1,10 +1,11 @@
 package com.wa_project.domain.entity
 
-import org.springframework.data.annotation.Id
 import java.time.LocalDate
 import javax.persistence.Column
 import javax.persistence.GeneratedValue
-
+import javax.persistence.Entity
+import javax.persistence.Id
+@Entity
 class UserEntity {
     @Id
     @GeneratedValue

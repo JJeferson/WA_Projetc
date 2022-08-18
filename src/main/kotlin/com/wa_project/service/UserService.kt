@@ -13,8 +13,9 @@ import org.springframework.stereotype.Service
 class UserService: UserUseCase {
     @Autowired
     var userRepository: UserRepository? = null
-
+    @Autowired
     var dtoToEntity: DtoToEntity? = null
+    @Autowired
     var entityToDto: EntityToDto? = null
 
     override fun save(userDTO: UserDTO?): UserDTO? {

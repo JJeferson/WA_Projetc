@@ -7,6 +7,7 @@ plugins {
 	kotlin("jvm") version "1.6.21"
 	kotlin("plugin.spring") version "1.6.21"
 	kotlin("plugin.jpa") version "1.6.21"
+	kotlin("kapt") version "1.3.72"
 }
 
 group = "com.wa_project"
@@ -22,6 +23,8 @@ dependencies {
 	testImplementation("org.junit.jupiter:junit-jupiter-api:5.3.1")
 	testImplementation("org.junit.jupiter:junit-jupiter-engine:5.3.1")
 	testImplementation("org.assertj:assertj-core:3.11.1")
+
+	kapt("org.mapstruct:mapstruct-processor:1.3.1.Final")
 
 	implementation("org.springframework.boot:spring-boot-starter-mustache")
 	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
