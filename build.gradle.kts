@@ -19,11 +19,14 @@ repositories {
 }
 
 dependencies {
-	implementation("org.mapstruct:mapstruct:1.5.2.Final")
+
+	testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
 	testImplementation("org.junit.jupiter:junit-jupiter-api:5.3.1")
 	testImplementation("org.junit.jupiter:junit-jupiter-engine:5.3.1")
+	testImplementation("org.mockito.kotlin:mockito-kotlin:4.0.0")
 	testImplementation("org.assertj:assertj-core:3.11.1")
 
+	implementation("org.mapstruct:mapstruct:1.5.2.Final")
 	kapt("org.mapstruct:mapstruct-processor:1.3.1.Final")
 
 	implementation("org.springframework.boot:spring-boot-starter-mustache")
@@ -36,6 +39,12 @@ dependencies {
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	runtimeOnly("com.h2database:h2")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+}
+
+
+tasks.test {
+	useJUnit()
+	useJUnitPlatform()
 }
 
 tasks.withType<KotlinCompile> {
