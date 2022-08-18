@@ -1,7 +1,7 @@
 # WA_Projetc
 
 ###Stacks:
-##### *Banco H2 em memória(url:http://localhost:8080/h2-console)/JPA
+##### *Banco H2 em memória(url:http://localhost:8080/h2-console)  /JPA
 ##### *Kotlin/SpringBoot/Gradle
 ##### *ControllerAdivce, valida algumas entradas
 ##### *Exemplos de testes unitários
