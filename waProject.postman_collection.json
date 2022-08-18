@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "81d67bdc-1a8a-4633-83e2-c6ce6e6ec217",
+		"name": "waProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10169346"
+	},
+	"item": [
+		{
+			"name": "Grava Novo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"nome\": \"teste\",\r\n    \"documento\" : \"teste\",\r\n    \"dataDeCriacao\" : \"2019-02-28\",\r\n    \"dataDeAtualização\" : \"2019-02-28\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/cad/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"cad",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Altera",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"nome\": \"teste\",\r\n    \"documento\" : \"teste\",\r\n    \"dataDeCriacao\" : \"2019-02-28\",\r\n    \"dataDeAtualização\" : \"2019-02-28\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/cad/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"cad",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findbyid",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/cad/user?id=2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"cad",
+						"user"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
